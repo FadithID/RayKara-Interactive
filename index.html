@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RayKara Interactive</title>
+      <link rel="icon" type="image/png" href="image/RayKara Logo.png">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+  (function () {
+    emailjs.init("tO80x0BjJFMOHXfsq"); // ganti dengan public key dari EmailJS
+  })();
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div id="splash-screen">
+    <h1 class="splash-logo">Welcome</h1>
+  </div>
+
+<header class="navbar hide-nav">
+  <div class="logo">RayKara</div>
+  <nav>
+    <ul>
+      <li><a href="#hero"><span>🏠</span></a></li> <!-- Tombol rumah -->
+      <li><a href="#about">About</a></li>
+      <li><a href="#games">Games</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <section id="hero" class="hero">
+    <div class="bg-image"></div>
+    <div class="hero-content">
+      <h1>This Our Website</h1>
+      <p>Creative Game Studio from Indonesia</p>
+    </div>
+  </section>
+
+  <section id="about" class="section fade-in">
+    <div class="about-content">
+      <div class="text">
+        <h2>About Us</h2>
+        <p>
+          RayKara Interactive is a game studio focused on creating engaging and impactful games that combine storytelling and stunning visuals. Our team consists of passionate developers and artists.
+        </p>
+      </div>
+      <div class="image">
+        <img src="image/About Us Image.jpg" alt="Studio Image" />
+      </div>
+    </div>
+  </section>
+
+<section id="games" class="section fade-in">
+  <h2 class="fade-in">Our Games</h2>
+  <div class="game-grid">
+    <div class="game-card" onclick="openModal('image/ComingSoon.png', 'ComingSoon', 'Not Developed Yet.')">
+      <img src="image/ComingSoon.png" alt="Game 1" />
+    </div>
+
+    <div class="game-card" onclick="openModal('image/ComingSoon.png', 'Coming Soon', 'Not Developed Yet.')">
+      <img src="image/ComingSoon.png" alt="Game 2" />
+    </div>
+    <!-- Tambahkan lebih banyak game-card di sini -->
+  </div>
+</section>
+
+
+  <section id="team" class="section fade-in">
+    <h2>Meet The Team</h2>
+    <div class="team-grid">
+      <!-- 4 Team Members -->
+      <div class="team-card">
+        <img src="image/Padit.png" alt="Dev 1" />
+        <h3>Fadit Gunawan</h3>
+        <p>Lead Developer</p>
+      </div>
+      <div class="team-card">
+        <img src="image/unknown.png" alt="Artist" />
+        <h3>Unknown</h3>
+        <p>Art Director</p>
+      </div>
+      <div class="team-card">
+        <img src="image/unknown.png" alt="Designer" />
+        <h3>Unknown</h3>
+        <p>Game Designer</p>
+      </div>
+      <div class="team-card">
+        <img src="image/unknown.png" alt="Composer" />
+        <h3>Unknown</h3>
+        <p>Composer</p>
+      </div>
+    </div>
+  </section>
+
+<section id="contact" class="section fade-in">
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <form id="contact-form" class="contact-form">
+      <input type="text" id="from_name" name="from_name" placeholder="Enter your name" required />
+
+      <textarea id="message" name="message" placeholder="Write your message..." rows="5" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+    <div id="thank-you-message" style="display: none;">
+      Thank you for contacting me! 😊
+    </div>
+  </div>
+</section>
+
+
+  <footer class="footer">
+    <p>&copy; 2025 RayKara Interactive. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal fullscreen -->
+<div id="game-modal" class="game-modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <img id="modal-image" src="" alt="Game Image">
+    <div class="modal-info">
+      <h3 id="modal-title">Game Title</h3>
+      <p id="modal-desc">Deskripsi game.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
